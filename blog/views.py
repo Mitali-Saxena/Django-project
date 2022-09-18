@@ -10,7 +10,7 @@ def home(request):
 
 
 def blog(request):
-    no_of_posts = 5
+    no_of_posts = 3
     # if request.GET['pageno']
     page = request.GET.get('page')
     if page is None:

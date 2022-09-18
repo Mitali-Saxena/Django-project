@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% block blogactive %}active{% endblock blogactive %}
-{% block body %}
-
 {% block css %}
-<style>
-    .container{
 
-      min-height: 100vh;
-    }
+<style>
+  .container{
+    
+    min-height: 100vh;
+  }
 </style>
 {% endblock css %}
-<div class="container">
+{% block body %}
 
+<div class="container">
    
 <h1 class= "my-3">Welcome to Mountain Coders Blog</h1>
 {% for blog in blogs %}
@@ -34,9 +34,9 @@
      {% endif %}
 
      {% if nxt %}
-    <button class="btn btn-success float-right"><a class="text-light" href="/blog?page={{nxt}}">Next &raquo;</a></button>
+    <button class="btn btn-success float-end"><a class="text-light" href="/blog?page={{nxt}}">Next &raquo;</a></button>
     {% else %}
-    <button class="btn btn-success float-right"><a class="text-light" href="#">Next &raquo;</a></button>
+    <button class="btn btn-success float-end"><a class="text-light" href="#">Next &raquo;</a></button>
      {% endif %}
   </div>
 </div>
