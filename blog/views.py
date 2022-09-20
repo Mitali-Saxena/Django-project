@@ -31,10 +31,10 @@ def blog(request):
     (page - 1)*no_of_posts and page*no_of_posts
     ...
 
-    blog = Blog.objects.all()
-    length = len(blog)
+    blogs = Blog.objects.all()
+    length = len(blogs)
     
-    blog = blog[(page-1)*no_of_posts: page*no_of_posts]
+    blogs = blogs[(page-1)*no_of_posts: page*no_of_posts]
     if page>1:
         prev = page -1
     else:
@@ -46,7 +46,7 @@ def blog(request):
     else:
         nxt = None   
     print(prev,nxt)    
-    context = {'blogs': blog, 'prev': prev, 'nxt': nxt}
+    context = {'blogs': blogs, 'prev': prev, 'nxt': nxt}
     return render(request, 'bloghome.html', context)
 
 
